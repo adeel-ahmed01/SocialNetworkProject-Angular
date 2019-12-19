@@ -1,0 +1,12 @@
+<form class="book-form" [formGroup]="bookForm" (ngSubmit)="onSubmit(bookForm.value)">
+  <mat-form-field class="book-field-full-width">
+    <input matInput id="email" type="text" placeholder="Email" formControlName="title">
+  </mat-form-field>
+  <mat-form-field class="book-field-full-width">
+    <input matInput id="password" type="text" placeholder="Password" formControlName="author">
+  </mat-form-field>
+  <span>
+    <button mat-raised-button color="blue" title="back" routerLink="/">Retour</button>
+    <button mat-raised-button color="accent" type="submit">Sign in</button>
+  </span>
+</form>
