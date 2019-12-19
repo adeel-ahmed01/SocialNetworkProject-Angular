@@ -1,7 +1,15 @@
 import {HttpClient, HttpClientModule} from '@angular/common/http';
 import {NgModule} from '@angular/core';
 import {ReactiveFormsModule} from '@angular/forms';
-import {MatButtonModule, MatCardModule, MatIconModule, MatInputModule, MatSnackBarModule, MatToolbarModule} from '@angular/material';
+import {
+  MatButtonModule,
+  MatCardModule,
+  MatIconModule,
+  MatInputModule,
+  MatListModule,
+  MatSnackBarModule,
+  MatToolbarModule
+} from '@angular/material';
 import {BrowserModule} from '@angular/platform-browser';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 
@@ -13,13 +21,17 @@ import {RegisterComponent} from './components/register/register.component';
 import {BookRepository} from './services/book.repository';
 import {BookService} from './services/real/book.service';
 import {TopicsModule} from './topics/topics.module';
+import { LoginComponent } from './components/login/login.component';
+import { SpecialTopicsComponent } from './components/special-topics/special-topics.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     LibraryComponent,
     BookComponent,
-    RegisterComponent
+    RegisterComponent,
+    LoginComponent,
+    SpecialTopicsComponent
   ],
   imports: [
     BrowserModule,
@@ -33,7 +45,8 @@ import {TopicsModule} from './topics/topics.module';
     MatIconModule,
     MatInputModule,
     MatSnackBarModule,
-    TopicsModule
+    TopicsModule,
+
   ],
   providers: [
     {provide: BookRepository, useFactory: (http: HttpClient) => new BookService(http), 'deps': [HttpClient]}

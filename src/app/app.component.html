@@ -1,13 +1,15 @@
 <mat-toolbar color="primary">
-  <span>Library</span>
+  <span>Internal Social Network</span>
   <span class="spacer"></span>
-  <button mat-mini-fab routerLink="/register">
-    <mat-icon aria-hidden="false" aria-label="Register book">add</mat-icon>
-  </button>
+  <button class="btn-space" mat-stroked-button color="white" routerLink="/topics">Topics</button>
+  <button class="btn-space" mat-button color="white" routerLink="/topics">Annouces</button>
+  <span class="spacer"></span>
+
+      <button class="btn-space" mat-raised-button color="accent" routerLink="/login">Sign in</button>
+      <!-- <button class="btn-space" mat-raised-button color="accent" routerLink="/register">Register</button> -->
 </mat-toolbar>
+
 <div class="container">
 
-  <!--  -->
-  <button routerLink="/topics">Topics</button>
   <router-outlet></router-outlet>
 </div>

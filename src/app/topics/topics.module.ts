@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { TopicListComponent } from './topic-list/topic-list.component';
+import {MatCardModule, MatListModule} from '@angular/material';
 
 
 
@@ -10,7 +11,9 @@ import { TopicListComponent } from './topic-list/topic-list.component';
         TopicListComponent
     ],
     imports: [
-        CommonModule
+        CommonModule,
+        MatListModule,
+        MatCardModule
     ]
 })
 export class TopicsModule { }
