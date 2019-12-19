@@ -12,6 +12,7 @@ import {LibraryComponent} from './components/library/library.component';
 import {RegisterComponent} from './components/register/register.component';
 import {BookRepository} from './services/book.repository';
 import {BookService} from './services/real/book.service';
+import {TopicsModule} from './topics/topics.module';
 
 @NgModule({
   declarations: [
@@ -31,7 +32,8 @@ import {BookService} from './services/real/book.service';
     MatCardModule,
     MatIconModule,
     MatInputModule,
-    MatSnackBarModule
+    MatSnackBarModule,
+    TopicsModule
   ],
   providers: [
     {provide: BookRepository, useFactory: (http: HttpClient) => new BookService(http), 'deps': [HttpClient]}
