@@ -10,6 +10,7 @@ export class TopicListComponent implements OnInit {
 
   private url = 'http://localhost:8080/api/topics';
   public topicsList: any;
+  public userConnected;
 
   constructor( private http: HttpClient) { }
 
